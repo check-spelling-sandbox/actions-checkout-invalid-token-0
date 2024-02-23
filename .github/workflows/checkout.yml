@@ -1,0 +1,23 @@
+name: checkout
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          token: jdsffjsklfjalksdjflksfklsafsdf
+        id: checkout
+        continue-on-error: true
+      - name: review
+        shell: bash
+        env:
+          checkout_step: ${{ toJSON(steps.checkout) }}
+        run: |
+          echo "$checkout_step"
