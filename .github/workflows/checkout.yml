@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: jsoref/checkout@outputs
         with:
           token: jdsffjsklfjalksdjflksfklsafsdf
         id: checkout
