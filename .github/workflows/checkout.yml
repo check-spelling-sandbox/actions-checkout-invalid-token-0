@@ -20,6 +20,6 @@ jobs:
         env:
           checkout_step: ${{ toJSON(steps.checkout) }}
         run: |
-          echo '```json`' >> $GITHUB_STEP_SUMMARY
+          echo '```json' >> $GITHUB_STEP_SUMMARY
           echo "$checkout_step" | tee -a $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
